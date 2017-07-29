@@ -19,7 +19,7 @@ public class GenerateItems : MonoBehaviour {
 
 	void Update () {
 
-		if (Random.Range(0f, 1f) > 0.91f) {
+		if (Random.Range(0f, 1f) > 0.8f) {
 			GameObject toSpawn = items[Random.Range(0, items.Length)];
 			Vector3 position = player.transform.position;
 			position += new Vector3(0, 0.1f, Random.Range(100, 200));
