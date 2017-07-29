@@ -9,23 +9,22 @@ public class ScoreManager : MonoBehaviour {
 
 	public static bool dead = false;
 
-	public static Text scoreText;
+	public Image scoreImage;
 	public Canvas deadCanvas;
 
 	void Start () {
-		scoreText = GetComponent<Text>();
 		InvokeRepeating("TickingScore", 1, 1);
 	}
 
 	public static void AddScore (int input) {
 		score += input;
-		score = Mathf.Clamp(score, 0, 100);
-		scoreText.text = score.ToString();
-	}
+        score = Mathf.Clamp(score, 0, 100);
+    }
 
 	void Update () {
 		dead = score < 1;
 		deadCanvas.enabled = dead;
+		scoreImage.fillAmount = (float)score/100;
 	}
 
 	void TickingScore () {

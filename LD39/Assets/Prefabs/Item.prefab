@@ -106,3 +106,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 1
+  overpoweredMaterial: {fileID: 2100000, guid: 789567acc181e4d21826bf0afde24675, type: 2}
