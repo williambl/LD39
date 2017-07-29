@@ -10,7 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform level;
 
     void FixedUpdate()
-	{
+    {
+		if (ScoreManager.dead)
+            return;
+
 		var x = Input.GetAxis("Horizontal") * Time.deltaTime * rotateSpeed * SpeedManager.speedMultiplier;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed * SpeedManager.speedMultiplier;
         z = Mathf.Clamp(z, 0, Mathf.Infinity);
