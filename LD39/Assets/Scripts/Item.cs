@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
 
+	public int score;
+
 	void OnTriggerEnter (Collider other) {
-		ScoreManager.AddScore(1);
+		ScoreManager.AddScore(score);
 		Destroy(gameObject);
-		}
+	}
 }
