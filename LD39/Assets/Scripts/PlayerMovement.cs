@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
 
     float rotateSpeed = 30;
     float moveSpeed = 10;
-    public Transform level;
+    public GameObject level;
+    float levelSpawnPoint = 0;
 
     void FixedUpdate()
     {
@@ -19,6 +20,11 @@ public class PlayerMovement : MonoBehaviour
         z = Mathf.Clamp(z, 0, Mathf.Infinity);
 		x = Mathf.Clamp(x, -4-transform.position.x, 4-transform.position.x);
         transform.Translate(x, 0, z);
-		level.Translate(0, 0, z);
+
+        if (transform.position.z > levelSpawnPoint - 75)
+        {
+            levelSpawnPoint += 100;
+            Instantiate(level, new Vector3(0, 0, levelSpawnPoint + 50), Quaternion.Euler(Vector3.zero));
+        }
 	}
 }
