@@ -315,8 +315,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114219312100680390, guid: c20af95c93d2f43a491006f8cd49c7b6,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: player
       value: 
       objectReference: {fileID: 356880709}
@@ -401,6 +400,7 @@ GameObject:
   - component: {fileID: 356880715}
   - component: {fileID: 356880717}
   - component: {fileID: 356880718}
+  - component: {fileID: 356880719}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -574,6 +574,21 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &356880719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 356880709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381cd88397ed14cbc8903f796b4bd3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 1433304627742026, guid: 780cf0fae777443b085e4db4d576fcb2, type: 2}
+  - {fileID: 1921816845078190, guid: d543aff3bfba2407bbd9a319c2d2ddad, type: 2}
+  player: {fileID: 0}
 --- !u!1 &469243467
 GameObject:
   m_ObjectHideFlags: 0
