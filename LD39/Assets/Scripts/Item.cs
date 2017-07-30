@@ -11,6 +11,7 @@ public class Item : MonoBehaviour {
 	{
 		if (Random.Range(0f, 1f) > 0.75 && score > 0) {
 			GetComponent<Renderer>().material = overpoweredMaterial;
+			GetComponent<Light>().color = Color.HSVToRGB(254, 100, 99);
 			score = 5;
         }
 	}
