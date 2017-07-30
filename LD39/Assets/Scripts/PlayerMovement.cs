@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    float rotateSpeed = 30;
     float moveSpeed = 10;
     public GameObject level;
     float levelSpawnPoint = 0;
@@ -15,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 		if (ScoreManager.dead)
             return;
 
-		var x = Input.GetAxis("Horizontal") * Time.deltaTime * rotateSpeed * SpeedManager.speedMultiplier;
+		var x = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed * SpeedManager.speedMultiplier;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed * SpeedManager.speedMultiplier;
         z = Mathf.Clamp(z, 0, Mathf.Infinity);
 		x = Mathf.Clamp(x, -4-transform.position.x, 4-transform.position.x);
