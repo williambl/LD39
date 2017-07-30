@@ -6,6 +6,7 @@ public class Item : MonoBehaviour {
 
 	public int score;
 	public Material overpoweredMaterial;
+	public AudioClip audioClip;
 
 	void Start ()
 	{
@@ -18,6 +19,9 @@ public class Item : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		ScoreManager.AddScore(score);
+		AudioSource otherAudio = other.GetComponent<AudioSource>();
+		otherAudio.clip = audioClip;
+		otherAudio.Play();
 		Destroy(gameObject);
 	}
 }

@@ -158,3 +158,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   overpoweredMaterial: {fileID: 2100000, guid: 789567acc181e4d21826bf0afde24675, type: 2}
+  audioClip: {fileID: 8300000, guid: 5291bff7f636a44928876318e5ce11b3, type: 3}
