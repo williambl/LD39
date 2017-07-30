@@ -11,9 +11,13 @@ public class ScoreManager : MonoBehaviour {
 
 	public Image scoreImage;
 	public Canvas deadCanvas;
+	Renderer rend;
+	new Light light;
 
 	void Start () {
 		InvokeRepeating("TickingScore", 1, 1);
+		rend = GetComponent<Renderer>();
+		light = GetComponent<Light>();
 	}
 
 	public static void AddScore (int input) {
@@ -24,7 +28,14 @@ public class ScoreManager : MonoBehaviour {
 	void Update () {
 		dead = score < 1;
 		deadCanvas.enabled = dead;
+
 		scoreImage.fillAmount = (float)score/100;
+
+		Color emissionColour = Color.HSVToRGB(0.13f, 0.817f, (float)score/100 * 1.5f, true);
+		Debug.Log(emissionColour.ToString());
+		rend.material.SetColor("_EmissionColor", emissionColour);
+
+		light.intensity = ((float)score/100) * 3;
 	}
 
 	void TickingScore () {
