@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23731806378248260}
   - component: {fileID: 114823866383339504}
   - component: {fileID: 108033226113093352}
+  - component: {fileID: 122894013347238354}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -159,3 +160,14 @@ MonoBehaviour:
   score: 1
   overpoweredMaterial: {fileID: 2100000, guid: 789567acc181e4d21826bf0afde24675, type: 2}
   audioClip: {fileID: 8300000, guid: 5291bff7f636a44928876318e5ce11b3, type: 3}
+--- !u!122 &122894013347238354
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433304627742026}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294882129
+  m_Size: 1
