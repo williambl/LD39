@@ -32,7 +32,6 @@ public class ScoreManager : MonoBehaviour {
 		scoreImage.fillAmount = (float)score/100;
 
 		Color emissionColour = Color.HSVToRGB(0.13f, 0.817f, (float)score/100 * 1.5f, true);
-		Debug.Log(emissionColour.ToString());
 		rend.material.SetColor("_EmissionColor", emissionColour);
 
 		light.intensity = ((float)score/100) * 3;
