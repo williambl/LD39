@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour {
 	public static bool dead = false;
 
 	public Image scoreImage;
-	public Canvas deadCanvas;
+	public DeathManager deathManager;
 	Renderer rend;
 	new Light light;
 
@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour {
 
 	void Update () {
 		dead = score < 1;
-		deadCanvas.enabled = dead;
+		deathManager.dead = dead;
 
 		scoreImage.fillAmount = (float)score/100;
 
