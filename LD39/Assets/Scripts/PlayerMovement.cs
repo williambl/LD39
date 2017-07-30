@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
             return;
 
 		var x = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed * SpeedManager.speedMultiplier;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed * SpeedManager.speedMultiplier;
+        var z = Time.deltaTime * moveSpeed * SpeedManager.speedMultiplier;
         z = Mathf.Clamp(z, 0, Mathf.Infinity);
 		x = Mathf.Clamp(x, -4-transform.position.x, 4-transform.position.x);
         transform.Translate(x, 0, z);
