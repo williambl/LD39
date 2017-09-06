@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "rolling out of power.data.unityweb",
+"asmCodeUrl": "rolling out of power.asm.code.unityweb",
+"asmMemoryUrl": "rolling out of power.asm.memory.unityweb",
+"asmFrameworkUrl": "rolling out of power.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
